@@ -74,7 +74,7 @@
     if (self.titleViewDelegate && [self.titleViewDelegate respondsToSelector:@selector(didSelectedTitleAtIndex:)]) {
         [self.titleViewDelegate didSelectedTitleAtIndex:sender.view.tag];
     }
-    [self setTitleIndex:sender.view.tag];
+    [self setTitleIndex:sender.view.tag withAnimations:YES];
 }
 
 - (void)getTitleWidths{
@@ -87,23 +87,32 @@
     _customW = _totalW + _margin * (_titles.count);
 }
 
--(void)setTitleIndex:(NSInteger)index{
+-(void)setTitleIndex:(NSInteger)index withAnimations:(BOOL)animation{
     
-    [UIView animateWithDuration:0.3 animations:^{
-        CGFloat xOriginalOffset = [_xLines[index] floatValue];
-        CGRect bottomLineRect = _line.frame;
-        bottomLineRect.origin.x = xOriginalOffset;
-        bottomLineRect.size.width = [_titleWidths[index] floatValue];
-        _line.frame = bottomLineRect;
-        CGFloat xOffset = xOriginalOffset + _line.frame.size.width / 2 - _kWidth / 2;
-        if (xOriginalOffset > _kWidth /2  && xOffset + _kWidth / 2 <_customW - _kWidth/2 ) {
-            self.contentOffset = CGPointMake( xOffset , 0);
-        }else if (xOffset + _kWidth / 2 >= _customW - _kWidth/2){
-            self.contentOffset = CGPointMake(_customW - _kWidth, 0);
-        }else{
-            self.contentOffset = CGPointZero;
-        }
-    }];
+    if (animation) {
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            [self movieTitleToIndex:index];
+        }];
+    }else{
+        [self movieTitleToIndex:index];
+    }
+}
+
+- (void)movieTitleToIndex:(NSInteger)index{
+    CGFloat xOriginalOffset = [_xLines[index] floatValue];
+    CGRect bottomLineRect = _line.frame;
+    bottomLineRect.origin.x = xOriginalOffset;
+    bottomLineRect.size.width = [_titleWidths[index] floatValue];
+    _line.frame = bottomLineRect;
+    CGFloat xOffset = xOriginalOffset + _line.frame.size.width / 2 - _kWidth / 2;
+    if (xOriginalOffset > _kWidth /2  && xOffset + _kWidth / 2 <_customW - _kWidth/2 ) {
+        self.contentOffset = CGPointMake( xOffset , 0);
+    }else if (xOffset + _kWidth / 2 >= _customW - _kWidth/2){
+        self.contentOffset = CGPointMake(_customW - _kWidth, 0);
+    }else{
+        self.contentOffset = CGPointZero;
+    }
 }
 
 @end

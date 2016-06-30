@@ -15,6 +15,8 @@
 		F70914031CBBEEEC0045270E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70914011CBBEEEC0045270E /* LaunchScreen.storyboard */; };
 		F70914181CBCFC350045270E /* HsScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F70914171CBCFC350045270E /* HsScrollTitleView.m */; };
 		F709141E1CBCFE7C0045270E /* HsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F709141D1CBCFE7C0045270E /* HsTestView.m */; };
+		F7F5D3821D23D5A000615771 /* HsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F5D3811D23D5A000615771 /* HsViewController.m */; };
+		F7F5D3851D23E08700615771 /* UIColor+string.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F5D3841D23E08700615771 /* UIColor+string.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		F70914171CBCFC350045270E /* HsScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HsScrollTitleView.m; sourceTree = "<group>"; };
 		F709141C1CBCFE7C0045270E /* HsTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HsTestView.h; sourceTree = "<group>"; };
 		F709141D1CBCFE7C0045270E /* HsTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HsTestView.m; sourceTree = "<group>"; };
+		F7F5D3801D23D5A000615771 /* HsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HsViewController.h; sourceTree = "<group>"; };
+		F7F5D3811D23D5A000615771 /* HsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HsViewController.m; sourceTree = "<group>"; };
+		F7F5D3831D23E08700615771 /* UIColor+string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+string.h"; sourceTree = "<group>"; };
+		F7F5D3841D23E08700615771 /* UIColor+string.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+string.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				F709141D1CBCFE7C0045270E /* HsTestView.m */,
 				F70914161CBCFC350045270E /* HsScrollTitleView.h */,
 				F70914171CBCFC350045270E /* HsScrollTitleView.m */,
+				F7F5D3801D23D5A000615771 /* HsViewController.h */,
+				F7F5D3811D23D5A000615771 /* HsViewController.m */,
+				F7F5D3831D23E08700615771 /* UIColor+string.h */,
+				F7F5D3841D23E08700615771 /* UIColor+string.m */,
 				F70913FC1CBBEEEC0045270E /* Main.storyboard */,
 				F70913FF1CBBEEEC0045270E /* Assets.xcassets */,
 				F70914011CBBEEEC0045270E /* LaunchScreen.storyboard */,
@@ -161,9 +171,11 @@
 			files = (
 				F70913FB1CBBEEEC0045270E /* ViewController.m in Sources */,
 				F70914181CBCFC350045270E /* HsScrollTitleView.m in Sources */,
+				F7F5D3851D23E08700615771 /* UIColor+string.m in Sources */,
 				F709141E1CBCFE7C0045270E /* HsTestView.m in Sources */,
 				F70913F81CBBEEEC0045270E /* AppDelegate.m in Sources */,
 				F70913F51CBBEEEC0045270E /* main.m in Sources */,
+				F7F5D3821D23D5A000615771 /* HsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,6 @@
 
 -(instancetype)initWithFrame:(CGRect)frame withTitles:(NSArray *)titles withTitleFont:(UIFont *)font;
 
-- (void)setTitleIndex:(NSInteger)index;
+- (void)setTitleIndex:(NSInteger)index withAnimations:(BOOL)animation;
 
 @end
